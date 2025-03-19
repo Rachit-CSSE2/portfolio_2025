@@ -80,7 +80,7 @@ class GameLevelDesert {
 
 
 
-    const sprite_src_chillguy = path + "/images/gamify/chillguyv3.png"; //chill guy playere data
+    const sprite_src_chillguy = path + "/images/gamify/chillguyv2.png"; //chill guy playere data
     const CHILLGUY_SCALE_FACTOR = 5;
     const sprite_data_chillguy = {
         id: 'Chill Guy',
