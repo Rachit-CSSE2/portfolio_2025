@@ -1,11 +1,6 @@
 export const baseurl = "/portfolio_2025";
 
-export var pythonURI;
-if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-    pythonURI = "http://localhost:8087";  // Same URI for localhost or 127.0.0.1
-} else {
-    pythonURI = "https://flask2025.nighthawkcodingsociety.com";
-}
+export const pythonURI = "http://localhost:8087"; // Ensure this is correct
 
 export var javaURI;
 // 127.0.0.1:8085 does not work for some machines
@@ -16,13 +11,9 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
 }
 
 export const fetchOptions = {
-    method: 'GET',  // Default method is GET
-    mode: 'cors', // Enable CORS (Cross-Origin Resource Sharing)
-    cache: 'default', // Default caching behavior
-    credentials: 'include', // Include credentials (cookies, etc.)
+    method: "GET",
     headers: {
-        'Content-Type': 'application/json',
-        'X-Origin': 'client' // Custom header to identify source
+        "Content-Type": "application/json",
     },
 };
 
