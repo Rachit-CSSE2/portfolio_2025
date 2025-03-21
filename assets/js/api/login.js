@@ -32,23 +32,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 });
 
-function getCredentials(baseurl) {
-    const URL = pythonURI + '/api/id';
-    return fetch(URL, fetchOptions)
-        .then(response => {
-            if (response.status !== 200) {
-                console.error("HTTP status code: " + response.status);
-                return null;
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (data === null) return null;
-            console.log(data);
-            return data;
-        })
-        .catch(err => {
-            console.error("Fetch error: ", err);
-            return null;
-        });
+async function getCredentials() {
+    const response = await fetch("http://localhost:8087/api/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username: "user", password: "pass" }),
+    });
+
+    if (!response.ok) {
+        throw new Error("Failed to fetch credentials");
+    }
+
+    return response.json();
 }
