@@ -26,6 +26,8 @@ const INIT_POSITION = { x: 0, y: 0 };
  * @property {number} height - The height of the object.
  * @property {number} xVelocity - The velocity of the object along the x-axis.
  * @property {number} yVelocity - The velocity of the object along the y-axis.
+ * @property {number} sVELOCITYY - The starting velocity of the object along the y-axis.
+ * @property {number} sVELOCITYX - The starting velocity of the object along the x-axis.
  * @property {Image} spriteSheet - The sprite sheet image for the object.
  * @property {number} frameIndex - The current frame index for animation.
  * @property {number} frameCount - The total number of frames for each direction.

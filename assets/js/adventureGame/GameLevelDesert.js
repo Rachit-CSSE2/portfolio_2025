@@ -29,11 +29,11 @@ class GameLevelDesert {
     const sprite_data_chillguy2 = {
         id: 'Chill Guy',
         greeting: "Hi, I am Chill Guy, the desert wanderer. I am looking for wisdom and adventure!",
-        src: sprite_src_chillguy,
-        SCALE_FACTOR: CHILLGUY_SCALE_FACTOR,
+        src: sprite_src_chillguy2,
+        SCALE_FACTOR: CHILLGUY2_SCALE_FACTOR,
         STEP_FACTOR: 1000,
         ANIMATION_RATE: 50,
-        INIT_POSITION: { x: 0, y: height - (height / CHILLGUY_SCALE_FACTOR) }, 
+        INIT_POSITION: { x: 0, y: height - (height / CHILLGUY2_SCALE_FACTOR) }, 
         pixels: { height: 1024, width: 384 }, // Adjusted to match the provided sprite sheet
         orientation: { rows: 8, columns: 3 }, // 8 total rows (4 movement + 4 stationary)
 
@@ -373,6 +373,7 @@ class GameLevelDesert {
     this.classes = [
       { class: Background, data: image_data_desert },
       { class: Player, data: sprite_data_chillguy },
+      { class: Player, data: sprite_data_chillguy2 },
       { class: Npc, data: sprite_data_tux },
       { class: Npc, data: sprite_data_octocat },
       { class: Npc, data: sprite_data_robot },
